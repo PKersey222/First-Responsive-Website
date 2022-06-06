@@ -1,0 +1,91 @@
+/* Style big to little elements */
+/* Code Mobile First */
+
+main {
+    margin:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    background: cornflowerblue;
+}
+
+section {
+    padding:20px;
+    min-height: 100%;
+    text-align: center;
+    background-color: white;
+}
+
+h1 {
+    color: white;
+    font-size: 40px;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 28px;
+}
+
+p{
+    font-family: Open Sans, sans-serif;
+    font-size:16px;
+}
+
+.barone, .bartwo, .barthree {
+    margin: 0 auto;
+    height: 30px;
+    width: 200px;
+}
+
+.barone {
+    background-color: cornflowerblue;
+}
+
+.barone {
+    background-color: darkorange;
+}
+
+.barone {
+    background-color:darkcyan;
+}
+
+/* Assign the grid areas */
+
+main {grid-area:main;}
+.one {grid-area:one;}
+.two {grid-area:two;}
+.three {grid-area:three;}
+
+/* Define the grid */
+@media (min-width: 576px){
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat (3,1fr);
+        grid-template-areas: 
+            "main main"
+            "one two"
+            "three .";
+    }
+
+main {
+
+    background-color:  darkcyan;
+
+
+    }
+
+h2, p {
+    
+    color: green;
+
+    }
+}
+
+@media (min-width:992px) {
+
+    body {
+        background-color: black;
+    }
+}
