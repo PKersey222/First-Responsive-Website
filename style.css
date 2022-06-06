@@ -3,7 +3,7 @@
 
 main {
     margin:0;
-    display: flex;
+    display: flex; 
     align-items: center;
     justify-content: center;
     height: 400px;
@@ -25,6 +25,7 @@ h1 {
 h2 {
     font-weight: 600;
     font-size: 28px;
+    color: black;
 }
 
 p{
@@ -42,20 +43,20 @@ p{
     background-color: cornflowerblue;
 }
 
-.barone {
+.bartwo {
     background-color: darkorange;
 }
 
-.barone {
+.barthree {
     background-color:darkcyan;
 }
 
 /* Assign the grid areas */
 
 main {grid-area:main;}
-.one {grid-area:one;}
-.two {grid-area:two;}
-.three {grid-area:three;}
+.section-one {grid-area:section-one;}
+.section-two {grid-area:section-two;}
+.section-three {grid-area:section-three;}
 
 /* Define the grid */
 @media (min-width: 576px){
@@ -65,27 +66,46 @@ main {grid-area:main;}
         grid-template-rows: repeat (3,1fr);
         grid-template-areas: 
             "main main"
-            "one two"
-            "three .";
+            "section-one section-two"
+            "section-three .";
     }
 
-main {
+    main {
 
-    background-color:  darkcyan;
-
+        background-color:  darkcyan;
 
     }
 
-h2, p {
+    h2, p {
     
-    color: green;
+        color: green;
 
     }
 }
 
-@media (min-width:992px) {
+@media (min-width: 992px) {
 
     body {
+        background-color: black;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,1fr);
+        grid-template-areas: 
+            "main main main"
+            "section-one section-two section-three";
+    }
+
+    h1{
+        font-size: 60px;
+    }
+
+    h2, p {
+        color: black;
+    }
+
+    .one, .two, .three {
         background-color: black;
     }
 }
